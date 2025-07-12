@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Метеостанция</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌦 Метеостанция</h1>
+    </header>
+
+    <div class="sensor-card">
+      <div class="sensor-header">
+        <h2>Датчик BMP280</h2>
+        <button id="show-map-btn">📍 Карта</button>
+      </div>
+      <div class="sensor-data">
+        <div class="data-item">
+          <span class="icon">🌡</span>
+          <span id="temp">-- °C</span>
+        </div>
+        <div class="data-item">
+          <span class="icon">📌</span>
+          <span id="pressure">-- гПа</span>
+        </div>
+        <div class="data-item">
+          <span class="icon">🏔</span>
+          <span id="altitude">-- м</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="map-container" class="hidden">
+      <div id="map"></div>
+      <button id="close-map-btn">✖ Закрыть</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
